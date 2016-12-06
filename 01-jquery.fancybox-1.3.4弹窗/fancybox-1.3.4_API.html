@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+table th,
+table td{border:1px solid #CCC;}
+table th{background:#f4f4f4;}
+</style>
+<body>
+<table class="options" cellpadding="6" cellspacing="0" width="969" style="width: 828px;">
+    <thead>
+        <tr class="even firstRow">
+            <th width="120">
+                <span style="font-size: 13px;">属性名</span>
+            </th>
+            <th width="120">
+                <span style="font-size: 13px;">默认值</span>
+            </th>
+            <th>
+                <span style="font-size: 13px;">简要说明</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                padding
+            </td>
+            <td>
+                10
+            </td>
+            <td>
+                浏览框内边距，和css中的padding一个意思
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                margin
+            </td>
+            <td>
+                20
+            </td>
+            <td>
+                浏览框外边距，和css中的margin一个意思
+            </td>
+        </tr>
+        <tr>
+            <td>
+                opacity
+            </td>
+            <td>
+                false
+            </td>
+            <td>
+                如果为true，则fancybox在动画改变的时候透明度可以跟着改变
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                modal
+            </td>
+            <td>
+                false
+            </td>
+            <td>
+                如果为true，则&#39;overlayShow&#39; 会被设成 &#39;true&#39; ， &#39;hideOnOverlayClick&#39;, &#39;hideOnContentClick&#39;, &#39;enableEscapeButton&#39;, &#39;showCloseButton&#39; 会被设成 &#39;false&#39;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cyclic
+            </td>
+            <td>
+                false
+            </td>
+            <td>
+                如果为true，相册会循环播放
+            </td>
+        </tr>
+        <tr class="sep even">
+            <td>
+                scrolling
+            </td>
+            <td>
+                &#39;auto&#39;
+            </td>
+            <td>
+                设置overflow的值来创建或隐藏滚动条，可以设置成 &#39;auto&#39;, &#39;yes&#39;, or &#39;no&#39;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                width
+            </td>
+            <td>
+                560
+            </td>
+            <td>
+                设置iframe和swf的宽度，如果 &#39;autoDimensions&#39;为 &#39;false&#39;，这也可以设置普通文本的宽度
+            </td>
+        </tr>
+        <tr class="sep even">
+            <td>
+                height
+            </td>
+            <td>
+                340
+            </td>
+            <td>
+                设置iframe和swf的高度，如果 &#39;autoDimensions&#39;为 &#39;false&#39;，这也可以设置普通文本的高度
+            </td>
+        </tr>
+        <tr>
+            <td>
+                autoScale
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，fancybox可以自适应浏览器窗口大小
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                autoDimensions
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                在内联文本和ajax中，设置是否动态调整元素的尺寸，如果为true，请确保你已经为元素设置了尺寸大小
+            </td>
+        </tr>
+        <tr class="sep">
+            <td>
+                centerOnScroll
+            </td>
+            <td>
+                false
+            </td>
+            <td>
+                如果为true，当你滚动滚动条时，fancybox将会一直停留在浏览器中心
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                ajax
+            </td>
+            <td>
+                { }
+            </td>
+            <td>
+                和jquery的ajax调用选项一样<br/>注意: &#39;error&#39; and &#39;success&#39; 这两个回调事件会被fancybox重写
+            </td>
+        </tr>
+        <tr class="sep">
+            <td>
+                swf
+            </td>
+            <td>
+                {wmode: &#39;transparent&#39;}
+            </td>
+            <td>
+                swf的设置选项
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                hideOnOverlayClick
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true则点击遮罩层关闭fancybox
+            </td>
+        </tr>
+        <tr class="sep">
+            <td>
+                hideOnContentClick
+            </td>
+            <td>
+                false
+            </td>
+            <td>
+                如果为true则点击播放内容关闭fancybox
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                overlayShow
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，则显示遮罩层
+            </td>
+        </tr>
+        <tr>
+            <td>
+                overlayOpacity
+            </td>
+            <td>
+                0.3
+            </td>
+            <td>
+                遮罩层的透明度（范围0-1）
+            </td>
+        </tr>
+        <tr class="sep even">
+            <td>
+                overlayColor
+            </td>
+            <td>
+                &#39;#666&#39;
+            </td>
+            <td>
+                遮罩层的背景颜色
+            </td>
+        </tr>
+        <tr>
+            <td>
+                titleShow
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，则显示标题
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                titlePosition
+            </td>
+            <td>
+                &#39;outside&#39;
+            </td>
+            <td>
+                设置标题显示的位置.可以设置成 &#39;outside&#39;, &#39;inside&#39; 或 &#39;over&#39;
+            </td>
+        </tr>
+        <tr class="sep">
+            <td>
+                titleFormat
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                可以自定义标题的格式
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                transitionIn, transitionOut
+            </td>
+            <td>
+                &#39;fade&#39;
+            </td>
+            <td>
+                设置动画效果. 可以设置为 &#39;elastic&#39;, &#39;fade&#39; 或 &#39;none&#39;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                speedIn, speedOut
+            </td>
+            <td>
+                300
+            </td>
+            <td>
+                fade 和 elastic 动画切换的时间间隔, 以毫秒为单位
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                changeSpeed
+            </td>
+            <td>
+                300
+            </td>
+            <td>
+                切换时fancybox尺寸的变化时间间隔（即变化的速度），以毫秒为单位
+            </td>
+        </tr>
+        <tr>
+            <td>
+                changeFade
+            </td>
+            <td>
+                &#39;fast&#39;
+            </td>
+            <td>
+                切换时内容淡入淡出的时间间隔（即变化的速度）
+            </td>
+        </tr>
+        <tr class="sep even">
+            <td>
+                easingIn, easingOut
+            </td>
+            <td>
+                &#39;swing&#39;
+            </td>
+            <td>
+                为 elastic 动画使用 Easing
+            </td>
+        </tr>
+        <tr>
+            <td>
+                showCloseButton
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，则显示关闭按钮
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                showNavArrows
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，则显示上一张下一张导航箭头
+            </td>
+        </tr>
+        <tr class="sep">
+            <td>
+                enableEscapeButton
+            </td>
+            <td>
+                true
+            </td>
+            <td>
+                如果为true，则启用ESC来关闭fancybox
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                onStart
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                回调函数，加载内容是触发
+            </td>
+        </tr>
+        <tr>
+            <td>
+                onCancel
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                回调函数，取消加载内容后触发
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                onComplete
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                回调函数，加载内容完成后触发
+            </td>
+        </tr>
+        <tr>
+            <td>
+                onCleanup
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                回调函数，关闭fancybox前触发
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                onClosed
+            </td>
+            <td>
+                null
+            </td>
+            <td>
+                回调函数，关闭fancybox后触发
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <br/>
+</p>
+</body>
+</html>

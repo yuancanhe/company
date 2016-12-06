@@ -1,0 +1,12 @@
+一. 引入zepto文件：  
+<script type="text/javascript" src="zepto.min.js"></script>  
+   
+<script type="text/javascript" src="zepto.cookie.min.js"></script>  
+二. 存数据：  
+$.fn.cookie('foo','bar');  
+   
+foo是名称，bar是foo的值；  
+三. 取数据：  
+$.fn.cookie('foo');  
+四. 设置有效期：  
+$.fn.cookie('foo','bar',{ expires : 7 });
